@@ -1,7 +1,5 @@
 package delivery
 
-
-
 type Handler struct{
 	RemSer RemoteService
 }
@@ -11,3 +9,4 @@ func NewHandler(rs *RemoteService) *Handler{
 		RemSer: *rs,
 	}
 }
+

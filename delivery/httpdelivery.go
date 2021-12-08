@@ -28,3 +28,4 @@ func (h *Handler) ConnectAuction(c *gin.Context){
 		//redirect to ws-endpoint
 	}
 }
+

@@ -15,7 +15,8 @@ func main(){
 	auction := router.Group("auction")
 	{
 		auction.GET("/connect/:id", handler.ConnectAuction)
-		auction.GET("/:id", handler.AuctionWSEndpoint)
+		auction.GET("/service/:id", handler.AuctionWSEndpoint)
+		auction.GET("/:id", handler.AuctionPage)
 	}
 }
 
