@@ -1,12 +1,16 @@
 package delivery
 
+import(
+	"auction_conduction/database"
+)
+
 type Handler struct{
-	RemSer RemoteService
+	repository *database.Repository
 }
 
-func NewHandler(rs *RemoteService) *Handler{
+func NewHandler(repos *database.Repository) *Handler{
 	return &Handler{
-		RemSer: *rs,
+		repository: repos,
 	}
 }
 

@@ -17,9 +17,17 @@ func (h *Handler) AuctionPage(c *gin.Context){
 		return
 	}
 
+	//http.ServeFile(c.Writer, c.Request, "client/auctionPage/static/ws_service.js")
+	if err != nil{
+		log.Println(err)
+	}
+
 	tmp.Execute(c.Writer, nil)
 }
 
+func (h *Handler) JSFile(c *gin.Context){
+	http.ServeFile(c.Writer, c.Request, "client/auctionPage/static/ws_service.js")
+}
 
 func (h *Handler) AuctionAdminPage(c *gin.Context){
 	

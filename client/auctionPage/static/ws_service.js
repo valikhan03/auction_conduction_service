@@ -1,4 +1,4 @@
-const ws = new WebSocket("localhost:8090/");
+const ws = new WebSocket("localhost:8050/auction/wsconn");
 
 ws.onopen() = function(event){
     console.log("connected");
